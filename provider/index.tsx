@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <>
       <QueryProvider>
         <Header />
-        {children}
+        <main className="site-main">{children}</main>
         <Footer />
       </QueryProvider>
     </>

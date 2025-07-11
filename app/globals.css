@@ -1,10 +1,17 @@
 @import "tailwindcss";
 body {
   font-family: var(--font-work-mono);
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .containers {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.site-main {
+  flex: 1;
 }

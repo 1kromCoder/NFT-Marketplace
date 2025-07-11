@@ -1,8 +1,7 @@
-
 export default function Home() {
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <>
+      <section>Discover digital art & Collect NFTs</section>
+    </>
   );
 }
