@@ -1,14 +1,16 @@
 import { Discord, Insta, Twiter, Youtube } from "@/assets/icons";
 import Heading from "@/components/Heading";
 import Text from "@/components/Text";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const t=useTranslations("HeroContent")
   return (
     <footer className="bg-[#3B3B3B] py-10">
-      <div className="containers bg-[#3B3B3B]">
-        <div className="flex justify-between">
+      <div className="containers">
+        <div className="flex flex-col lg:flex-row gap-[30px] lg:gap-0 justify-between">
           <div className="w-[238px] ">
             <Link className="!mb-[30px] inline-block" href={"/"}>
               <Image
@@ -40,18 +42,18 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <Heading classList="!mb-[25px] !text-[22px]">
-            Explore
+            <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
+            {t("title")}
             </Heading>
-            <Text>Marketplace</Text>
-            <Text classList="!my-[20px]">Rankings</Text>
-            <Text>Connect a wallet</Text>
+            <Text>{t("text")}</Text>
+            <Text classList="!my-[20px]">{t("text")}</Text>
+            <Text>{t("text")}</Text>
           </div>
           <div className="w-[330px]">
-            <Heading classList="!mb-[25px] !text-[22px]">
-            Join our weekly digest
+            <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
+            {t("title")}
             </Heading>
-            <Text classList="!mb-[20px]">Get exclusive promotions & updates straight to your inbox.</Text>
+            <Text classList="!mb-[20px]">{t("text")}</Text>
           </div>
         </div>
       </div>

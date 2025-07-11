@@ -1,17 +1,27 @@
 @import "tailwindcss";
+
+:root {
+  --clr-violet: #a259ff;
+}
 body {
   font-family: var(--font-work-mono);
   background-color: #2b2b2b;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  color: white;
 }
 .containers {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
 }
 
 .site-main {
   flex: 1;
+}
+
+.lang-wrapper:hover > .lang-popur {
+  height: 97px;
+  padding: 8px;
 }

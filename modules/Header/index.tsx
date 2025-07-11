@@ -1,11 +1,14 @@
 import { MenuIcon, UserIcon } from "@/assets/icons";
 import Button from "@/components/Button";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import LangConfig from "./LangConfig";
 
 const Header = () => {
+  const t = useTranslations("HeadersContent");
   return (
-    <header className="!max-w-[1180px] w-full px-[30px] lg:px-0 mx-auto py-5 flex items-center justify-between">
+    <header className="w-full lg:px-0 mx-auto !py-5 flex items-center justify-between">
       <Link href={"/"}>
         <Image
           className="w-[182px] h-[24px] lg:w-[243px] lg:h-[32px]"
@@ -21,22 +24,23 @@ const Header = () => {
           className="text-[14px] font-semibold text-[#FFFFFF] inline-block py-3 px-5"
           href={"/marketplace"}
         >
-          Marketplacm
+          {t("navItem1")}
         </Link>
         <Link
           className="text-[14px] font-semibold text-[#FFFFFF] inline-block py-3 px-5"
           href={"/rankings"}
         >
-          Rankings
+          {t("navItem2")}
         </Link>
         <Link
           className="text-[14px] font-semibold text-[#FFFFFF] inline-block py-3 px-5"
           href={"/connect-wallet"}
         >
-          Connect a wallet
+          {t("navItem3")}
         </Link>
+        <LangConfig />
         <Button
-          title="Sign Up"
+          title={t("button")}
           icon={<UserIcon />}
           iconPOsition="left"
           type="button"

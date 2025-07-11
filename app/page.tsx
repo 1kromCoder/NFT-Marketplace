@@ -1,7 +1,9 @@
+import Hero from "@/modules/Hero";
+
 export default function Home() {
   return (
     <>
-      <section>Discover digital art & Collect NFTs</section>
+      <Hero/>
     </>
   );
 }
