@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const t=useTranslations("HeroContent")
+  const t = useTranslations("HeadersContent");
   return (
     <footer className="bg-[#3B3B3B] py-10">
       <div className="containers">
@@ -43,17 +43,19 @@ const Footer = () => {
           </div>
           <div>
             <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
-            {t("title")}
+              Explore
             </Heading>
-            <Text>{t("text")}</Text>
-            <Text classList="!my-[20px]">{t("text")}</Text>
-            <Text>{t("text")}</Text>
+            <Text>{t("navItem1")}</Text>
+            <Text classList="!my-[20px]">{t("navItem2")}</Text>
+            <Text>{t("navItem3")}</Text>
           </div>
           <div className="w-[330px]">
             <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
-            {t("title")}
+              Join our weekly digest
             </Heading>
-            <Text classList="!mb-[20px]">{t("text")}</Text>
+            <Text classList="!mb-[20px]">
+              Get exclusive promotions & updates straight to your inbox.
+            </Text>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import LangConfig from "./LangConfig";
 const Header = () => {
   const t = useTranslations("HeadersContent");
   return (
-    <header className="w-full lg:px-0 mx-auto !py-5 flex items-center justify-between">
+    <header className="w-full lg:px-0 mx-auto !px-[50px] !py-5 flex items-center justify-between">
       <Link href={"/"}>
         <Image
           className="w-[182px] h-[24px] lg:w-[243px] lg:h-[32px]"

@@ -9,8 +9,8 @@ import React from "react";
 const Hero = () => {
   const t = useTranslations("HeroContent");
   return (
-    <section className="py-[80px]">
-      <div className="containers flex flex-col md:flex-row gap-[10px] justify-between">
+    <section className="py-[80px] !px-[100px]">
+      <div className="flex flex-col md:flex-row gap-[10px] justify-between">
         <div className="md:w-[50%]">
           <Heading tag="h1" classList="!mb-[20px]">
             {t("title")}
