@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const Button: FC<ButtonType> = ({
   icon,
-  iconPosition,
+  iconPostion,
   title,
   type,
   extraClass,
@@ -14,11 +14,11 @@ const Button: FC<ButtonType> = ({
       type={type}
       className={`py-[18px] px-[30px] cursor-pointer ${
         variant == "outlined" ? "border-[#A259FF] border-[2px]" : "bg-[#A259FF]"
-      } text-white rounded-[20px] font-semibold text-[16px], flex items-center gap-3 ${extraClass}`}
+      } text-white rounded-[20px] font-semibold text-[16px] flex items-center gap-3 ${extraClass}`}
     >
-      {iconPosition == "left" && icon}
+      {iconPostion == "left" && icon}
       {title}
-      {iconPosition == "right" && icon}
+      {iconPostion == "right" && icon}
     </button>
   );
 };

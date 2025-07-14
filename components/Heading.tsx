@@ -1,3 +1,4 @@
+import { getCookie } from "cookies-next";
 import React, { ReactNode } from "react";
 
 const Heading = ({
@@ -12,7 +13,7 @@ const Heading = ({
   if (tag == "h1") {
     return (
       <h1
-        className={`font-semibold text-[38px] leading-[130%] lg:text-[67px] lg:leading-[101%] text-white ${classList}`}
+        className={`font-semibold text-[38px] leading-[130%] lg:text-[67px] lg:leading-[101%]  text-white ${classList}`}
       >
         {children}
       </h1>
@@ -29,11 +30,11 @@ const Heading = ({
   }
   if (tag == "h3") {
     return (
-      <h3
+      <h1
         className={`font-semibold text-[22px] lg:text-[28px] leading-[140%] text-white ${classList}`}
       >
         {children}
-      </h3>
+      </h1>
     );
   }
 };
