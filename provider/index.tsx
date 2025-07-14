@@ -1,6 +1,6 @@
-import { Footer, Header} from "@/modules";
+import { Footer, Header } from "@/modules";
 import { QueryProvider } from "@/query";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { getCookie } from "cookies-next";
+
 const Heading = ({
   children,
   classList,
@@ -9,31 +9,31 @@ const Heading = ({
   classList?: string;
   tag: "h1" | "h2" | "h3";
 }) => {
-  if (tag === "h1") {
+  if (tag == "h1") {
+    return (
+      <h1
+        className={`font-semibold text-[38px] leading-[130%] lg:text-[67px] lg:leading-[101%] text-white ${classList}`}
+      >
+        {children}
+      </h1>
+    );
+  }
+  if (tag == "h2") {
     return (
       <h2
-        className={`text-[38px] font-semibold text-white leading-[130%] lg:text-[67px] lg:leading-[101%] ${classList}`}
+        className={`font-semibold text-[38px] leading-[101%] text-white ${classList}`}
       >
         {children}
       </h2>
     );
   }
-  if (tag === "h2") {
+  if (tag == "h3") {
     return (
-      <h2
-        className={`text-[38px] font-semibold text-white leading-[101%] ${classList}`}
+      <h3
+        className={`font-semibold text-[22px] lg:text-[28px] leading-[140%] text-white ${classList}`}
       >
         {children}
-      </h2>
-    );
-  }
-  if (tag === "h3") {
-    return (
-      <h2
-        className={`text-[22px] lg:text-[28px] font-semibold text-white leading-[140%] ${classList}`}
-      >
-        {children}
-      </h2>
+      </h3>
     );
   }
 };

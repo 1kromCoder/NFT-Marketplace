@@ -1,20 +1,20 @@
 import { MenuIcon, UserIcon } from "@/assets/icons";
 import Button from "@/components/Button";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import LangConfig from "./LangConfig";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   const t = useTranslations("HeadersContent");
   return (
-    <header className="w-full lg:px-0 mx-auto !px-[50px] !py-5 flex items-center justify-between">
+    <header className="containers !max-w-[1180px] w-full lg:px-0 flex items-center justify-between mx-auto !py-5">
       <Link href={"/"}>
         <Image
           className="w-[182px] h-[24px] lg:w-[243px] lg:h-[32px]"
           priority
           src={"/full-logo.svg"}
-          alt="Site Logo"
+          alt="site logo"
           width={243}
           height={32}
         />
@@ -40,12 +40,12 @@ const Header = () => {
         </Link>
         <LangConfig />
         <Button
-          title={t("button")}
-          icon={<UserIcon />}
-          iconPOsition="left"
-          type="button"
+          type="submit"
           variant="filled"
-        ></Button>
+          icon={<UserIcon />}
+          iconPosition="left"
+          title={t("button")}
+        />
       </nav>
       <button className="lg:hidden">
         <MenuIcon />

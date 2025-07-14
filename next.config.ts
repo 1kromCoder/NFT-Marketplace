@@ -1,15 +1,7 @@
-// import { NextConfig } from "next";
-// import createNextIntlPlugin from "next-intl/plugin";
-
-// const nextConfig: NextConfig = {};
-
-// const withNextIntl = createNextIntlPlugin();
-// export default withNextIntl(nextConfig);
-
-import createNextIntlPlugin from "next-intl/plugin";
-
+import {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const nextConfig: NextConfig = {};
+ 
 const withNextIntl = createNextIntlPlugin();
-
-export default withNextIntl({
-  matcher: ["/((?!api|_next|.*\\..*).*)"],
-});
+export default withNextIntl(nextConfig);

@@ -1,30 +1,32 @@
+
 import { Discord, Insta, Twiter, Youtube } from "@/assets/icons";
 import Heading from "@/components/Heading";
 import Text from "@/components/Text";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const Footer = () => {
-  const t = useTranslations("HeadersContent");
   return (
     <footer className="bg-[#3B3B3B] py-10">
       <div className="containers">
-        <div className="flex flex-col lg:flex-row gap-[30px] lg:gap-0 justify-between">
-          <div className="w-[238px] ">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-y-10">
+          <div className="lg:w-[238px] w-full">
             <Link className="!mb-[30px] inline-block" href={"/"}>
               <Image
+                priority
+                className="w-[243] h-[32px]"
                 src={"/full-logo.svg"}
-                alt="LOgo"
+                alt="sitelogo"
                 width={243}
                 height={32}
               />
             </Link>
-            <Text classList="!mb-[20px]">
+            <Text classList="mb-[20px]">
               NFT marketplace UI created with Anima for Figma.
             </Text>
             <div>
-              <Text classList="!mb-[15px]">Join our community</Text>
+              <Text classList="mb-[15px]">Join our community</Text>
               <div className="flex items-center gap-[10px]">
                 <Link href={"/"}>
                   <Discord />
@@ -42,18 +44,18 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
+            <Heading classList="!mb-[25px]" tag="h3">
               Explore
             </Heading>
-            <Text>{t("navItem1")}</Text>
-            <Text classList="!my-[20px]">{t("navItem2")}</Text>
-            <Text>{t("navItem3")}</Text>
+            <Text classList="!mb-[20px]">Marketplace</Text>
+            <Text classList="!mb-[20px]">Rankings</Text>
+            <Text classList="!mb-[20px]">Connect a wallet</Text>
           </div>
-          <div className="w-[330px]">
-            <Heading tag="h1" classList="!mb-[25px] !text-[22px]">
+          <div>
+            <Heading classList="!mb-[25px]" tag="h3">
               Join our weekly digest
             </Heading>
-            <Text classList="!mb-[20px]">
+            <Text classList="!mb-[20px] !w-[330px]">
               Get exclusive promotions & updates straight to your inbox.
             </Text>
           </div>
