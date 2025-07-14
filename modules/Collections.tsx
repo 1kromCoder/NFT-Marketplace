@@ -27,7 +27,7 @@ const Collections: FC<CollectionPageType> = ({ collection }) => {
           Checkout our weekly updated trending collection.
         </Text>
         <div className="flex justify-between">
-          {collections?.data?.map((item: CollectionType) => (
+          {collections.data.map((item: CollectionType) => (
             <CollectionCard key={item.id} item={item} />
           ))}
         </div>

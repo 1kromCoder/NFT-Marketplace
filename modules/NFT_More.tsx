@@ -1,46 +1,44 @@
 "use client";
-import { ArtistType } from "@/@types/ArtistType";
 import { MetaType } from "@/@types/MetaType";
-import { RocketIcon } from "@/assets/icons";
-import ArtistsCard from "@/components/ArtistsCard";
+import { NftType2 } from "@/@types/NftType";
+import { EyeIcon } from "@/assets/icons";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
+import NftCard from "@/components/NftCard";
 import Text from "@/components/Text";
 import { getQueryData } from "@/lib/getQueryData";
 import React, { FC } from "react";
 
-interface ArtistPageType {
-  artists: { data: ArtistType[]; meta: MetaType };
+interface NftPageType {
+  nft: { data: NftType2[]; meta: MetaType };
 }
-const Creators: FC<ArtistPageType> = ({ artists }) => {
-  const {
-    data: artistsList,
-    isLoading,
-    error,
-  } = getQueryData("/user?role=ARTIST&limit=12", artists, "artists");
+
+const NFTMore: FC<NftPageType> = ({ nft }) => {
+  const { data: nftList } = getQueryData("/nfts?limit=3", nft, "nft");
   return (
     <section className="py-[80px]">
       <div className="containers">
         <div className="flex mb-[60px] justify-between items-end">
           <div>
             <Heading classList="!mb-[10px]" tag="h2">
-              Top creators
+              Discover More NFTs
             </Heading>
             <Text classList="!text-white !text-[22px]">
-              Checkout Top Rated Creators on the NFT Marketplace
+              Explore new trending NFTs
             </Text>
           </div>
           <Button
+            extraClass="!px-[50px]"
             type="button"
             variant="outlined"
-            icon={<RocketIcon />}
+            icon={<EyeIcon />}
             iconPostion="left"
-            title="View Rankings"
+            title="See All"
           />
         </div>
-        <div className="flex flex-wrap justify-between gap-[30px]">
-          {artistsList?.data.map((item: ArtistType, index: number) => (
-            <ArtistsCard key={item.id} item={item} index={index} />
+        <div className="flex justify-between gap-[10px]">
+          {nftList?.data?.map((item: NftType2) => (
+            <NftCard key={item.id} item={item} />
           ))}
         </div>
       </div>
@@ -48,4 +46,4 @@ const Creators: FC<ArtistPageType> = ({ artists }) => {
   );
 };
 
-export default Creators;
+export default NFTMore;

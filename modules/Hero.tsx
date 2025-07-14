@@ -52,7 +52,7 @@ const Hero: FC<HeroType> = ({ actions, artists, actionResults }) => {
           <div className="!mt-[20px] lg:mt-[36px] flex gap-[30px]">
             <div>
               <Heading classList="" tag="h3">
-                {actionResultsLoading ? "0" : actionResultsList?.meta?.total}
+                {actionResultsLoading ? "0" : actionResultsList.meta.total}
               </Heading>
               <Text classList="!text-[16px] lg:!text-[23.99px] leading-[160%]">
                 {t("totalSale")}
@@ -60,7 +60,7 @@ const Hero: FC<HeroType> = ({ actions, artists, actionResults }) => {
             </div>
             <div>
               <Heading tag="h3">
-                {actionLoading ? "0" : actionsList?.meta?.total}
+                {actionLoading ? "0" : actionsList.meta.total}
               </Heading>
               <Text classList="!text-[16px] lg:!text-[23.99px] leading-[160%]">
                 {t("auctions")}
@@ -68,7 +68,7 @@ const Hero: FC<HeroType> = ({ actions, artists, actionResults }) => {
             </div>
             <div>
               <Heading tag="h3">
-                {artistLoading ? "0" : artistsList?.meta?.total}
+                {artistLoading ? "0" : artistsList.meta.total}
               </Heading>
               <Text classList="!text-[16px] lg:!text-[23.99px] leading-[160%]">
                 {t("artists")}
