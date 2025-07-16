@@ -6,7 +6,11 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
 
-const CollectionCard: FC<{ item: CollectionType }> = ({ item }) => {
+const CollectionCard: FC<{
+  item: CollectionType;
+  name?: string;
+  imgURL?: string;
+}> = ({ item, name, imgURL }) => {
   return (
     <div className="w-[330px]">
       <Image
@@ -20,7 +24,7 @@ const CollectionCard: FC<{ item: CollectionType }> = ({ item }) => {
       <div className="flex justify-between">
         <Image
           className="w-[100px] rounded-[20px] object-cover h-[100px] mb-[15px]"
-          src={`${API}/file/${item.images[1]}`}
+          src={`${API}/file/${item?.images[1]}`}
           alt="Collection img"
           width={100}
           height={100}
@@ -28,7 +32,7 @@ const CollectionCard: FC<{ item: CollectionType }> = ({ item }) => {
         />
         <Image
           className="w-[100px] rounded-[20px] object-cover h-[100px] mb-[15px]"
-          src={`${API}/file/${item.images[2]}`}
+          src={`${API}/file/${item?.images[2]}`}
           alt="Collection img"
           width={100}
           height={100}
@@ -47,14 +51,14 @@ const CollectionCard: FC<{ item: CollectionType }> = ({ item }) => {
       <div className="flex items-center gap-[12px]">
         <Image
           className="w-[24px] rounded-full object-cover h-[24px]"
-          src={`${API}/file/${item.creator.image}`}
+          src={`${API}/file/${imgURL ? imgURL : item.creator.image}`}
           alt="Creator img"
           width={24}
           height={24}
           priority
         />
         <Text classList="!text-[18px] !text-[#FFFFFF]">
-          {item.creator.username}
+          {name ? name : item.creator.username}
         </Text>
       </div>
     </div>

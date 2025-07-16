@@ -6,7 +6,7 @@ export interface ArtistType {
   username: string;
   email: string;
   password: string;
-  image:string;
+  image: string;
   role: string;
   bio: string;
   globeAccLink: string;

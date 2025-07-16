@@ -1,8 +1,8 @@
+import { CategoryType } from "@/@types/CategoryType";
 import { API } from "@/hooks/getEnv";
 import Image from "next/image";
 import React, { FC } from "react";
 import Heading from "./Heading";
-import { CategoryType } from "@/@types/CategoryType";
 
 const CategoryCard: FC<{ item: CategoryType }> = ({ item }) => {
   return (

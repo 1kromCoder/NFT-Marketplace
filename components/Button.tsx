@@ -8,9 +8,11 @@ const Button: FC<ButtonType> = ({
   type,
   extraClass,
   variant,
+  onClick,
 }) => {
   return (
     <button
+      onClick={onClick}
       type={type}
       className={`py-[18px] px-[30px] cursor-pointer ${
         variant == "outlined" ? "border-[#A259FF] border-[2px]" : "bg-[#A259FF]"
