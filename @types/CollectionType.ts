@@ -1,3 +1,5 @@
+import { MetaType } from "./MetaType";
+
 export interface CollectionType {
   id: string;
   title: string;
@@ -22,5 +24,11 @@ export interface CollectionType {
     instagramAccLink: string;
     createdAt: string;
     updatedAt: string;
+  };
+}
+export interface CollectionPageType {
+  collections: {
+    data: CollectionType[];
+    meta: MetaType;
   };
 }

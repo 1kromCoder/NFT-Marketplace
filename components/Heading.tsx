@@ -1,4 +1,3 @@
-import { getCookie } from "cookies-next";
 import React, { ReactNode } from "react";
 
 const Heading = ({

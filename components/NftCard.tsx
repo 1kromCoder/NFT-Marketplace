@@ -9,8 +9,7 @@ const NftCard: FC<{
   item: NftType2 | NftType;
   name?: string;
   imgURL?: string;
-  id?: string;
-}> = ({ item, name, imgURL, id }) => {
+}> = ({ item, name, imgURL }) => {
   return (
     <div
       className={`w-[330px] ${
