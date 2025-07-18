@@ -28,3 +28,12 @@ export interface ArtistPageType {
     meta: MetaType;
   };
 }
+
+export interface TopCreateorType {
+  artistId: string;
+  artistName: string;
+  nftSold: number;
+  totalRevenue: number;
+  growth: number;
+  image: string;
+}

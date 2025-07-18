@@ -5,4 +5,5 @@ export interface InputType {
   type: "text" | "email" | "password";
   classList?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  value?: string;
 }

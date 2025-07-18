@@ -5,6 +5,7 @@ import React, { FC } from "react";
 import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
+import { Link } from "@/i18n/navigation";
 
 const CollectionCard: FC<{
   item: CollectionType;
@@ -12,7 +13,7 @@ const CollectionCard: FC<{
   imgURL?: string;
 }> = ({ item, name, imgURL }) => {
   return (
-    <div className="w-[330px]">
+    <Link href={`/creator/collections/${item.creatorId}`} className="w-[330px]">
       <Image
         className="w-[330px] rounded-[20px] object-cover h-[330px] mb-[15px]"
         src={`${API}/file/${item.images[0]}`}
@@ -61,7 +62,7 @@ const CollectionCard: FC<{
           {name ? name : item.creator.username}
         </Text>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -15,16 +15,12 @@ const NestedRouteCaption = ({
     <div className="flex justify-between w-full">
       {routeList.map((item: RouteType) => (
         <button
-          onClick={() => setPeriod(item.title.toLowerCase())}
+          onClick={() => setPeriod(item.path)}
           style={{ width: `${100 / routeList.length}%` }}
           key={item.id}
           className={`border-b-[2px] ${
-            period == item.title.toLowerCase()
-              ? "border-[#858584]"
-              : "border-transparent"
-          } !w-[${
-            100 / routeList.length
-          }%] flex items-center cursor-pointer !gap-[16px] justify-center py-[15px] text-center`}
+            period == item.path ? "border-[#858584]" : "border-transparent"
+          } flex items-center cursor-pointer !gap-[16px] justify-center py-[15px] text-center`}
         >
           <span className="text-[22px] text-white leading-[140%]">
             {item.title}
